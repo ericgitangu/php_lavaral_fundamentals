@@ -14,8 +14,7 @@
     @include('layouts.navigation')
     <header class="container mx-auto mt-8">
         <!-- Button to Open Create Modal -->
-        <button onclick="openCreateModal()"
-            class="mt-4 px-4 py-2 bg-black border border-white text-white rounded mb-4">Create New
+        <button onclick="openCreateModal()" class="bg-gray-800 mt-4 px-4 py-2 dark:bg-gray-800 rounded mb-4">Create New
             Post +</button>
     </header>
     <main class="container mx-auto">
