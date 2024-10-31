@@ -11,8 +11,19 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('user')->latest()->get();
+        $posts = $this->getPosts();
         return view('posts.index', compact('posts'));
+    }
+
+    public function dashboard()
+    {
+        // Return the dashboard view without fetching posts initially
+        return view('dashboard');
+    }
+
+    protected function getPosts()
+    {
+        return Post::with('user')->latest()->get();
     }
 
     public function store(Request $request)
